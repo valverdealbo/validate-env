@@ -1,6 +1,6 @@
 {
   "name": "@valbo/validate-env",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Validate node environment variables",
   "keywords": [
     "env"

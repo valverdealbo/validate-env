@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/valverdealbo/validate-env/compare/v1.0.3...v1.0.4) (2021-04-18)
+
+
+### Bug Fixes
+
+* update dependencies ([52c979b](https://github.com/valverdealbo/validate-env/commit/52c979bc700da76efd9e008304c1dd4f03d9e935))
+
 ## [1.0.3](https://github.com/valverdealbo/validate-env/compare/v1.0.2...v1.0.3) (2021-02-19)
 
 
