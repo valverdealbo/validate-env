@@ -1,4 +1,4 @@
-import { requiredEnv, optionalEnv } from '.';
+import { requiredEnv, optionalEnv } from '../src';
 
 const PORT = '3001';
 const MONGODB_URI = 'mongodb://localhost:27017';
@@ -21,13 +21,7 @@ describe('requiredEnv()', () => {
 
   test('should throw when any env variables are missing', () => {
     process.env.PORT = PORT;
-    expect.assertions(2);
-    try {
-      requiredEnv('PORT', 'MONGODB_URI', 'DATABASE_NAME');
-    } catch (error) {
-      expect(error.message).toMatch('MONGODB_URI');
-      expect(error.message).toMatch('DATABASE_NAME');
-    }
+    expect(() => requiredEnv('PORT', 'MONGODB_URI', 'DATABASE_NAME')).toThrow();
   });
 });
 
