@@ -7,5 +7,5 @@ export function requiredEnv<T extends string>(...envKeys: T[]): Record<T, string
   if (missing.length > 0) {
     throw new Error(`missing required environment variables ${missing.join(', ')}`);
   }
-  return envKeys.filter(key => key !== undefined).reduce((acc, key) => ({ ...acc, [key]: process.env[key] }), {} as Record<T, string>);
+  return envKeys.reduce((acc, key) => ({ ...acc, [key]: process.env[key] }), {} as Record<T, string>);
 }
